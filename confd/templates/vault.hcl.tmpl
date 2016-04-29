@@ -1,0 +1,77 @@
+backend "{{ getenv "VAULT_BACKEND" }}" {
+    {{if getenv "VAULT_BACKEND_ADDRESS" }}address = "{{ getenv "VAULT_BACKEND_ADDRESS" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_ADVERTISE_ADDR" }}advertise_addr = "{{ getenv "VAULT_BACKEND_ADVERTISE_ADDR" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_PATH" }}path = "{{ getenv "VAULT_BACKEND_PATH" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_USERNAME" }}username = "{{ getenv "VAULT_BACKEND_USERNAME" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_PASSWORD" }}password = "{{ getenv "VAULT_BACKEND_PASSWORD" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_TLS_SKIP_VERIFY" }}tls_skip_verify = "{{ getenv "VAULT_BACKEND_TLS_SKIP_VERIFY" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_TLS_CA_FILE" }}tls_ca_file = "{{ getenv "VAULT_BACKEND_TLS_CA_FILE" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_TLS_CERT_FILE" }}tls_cert_file = "{{ getenv "VAULT_BACKEND_TLS_CERT_FILE" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_TLS_KEY_FILE" }}tls_key_file = "{{ getenv "VAULT_BACKEND_TLS_KEY_FILE" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_SCHEME" }}scheme = "{{ getenv "VAULT_BACKEND_SCHEME" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_TOKEN" }}token = "{{ getenv "VAULT_BACKEND_TOKEN" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_MAX_PARALLEL" }}max_parallel = "{{ getenv "VAULT_BACKEND_MAX_PARALLEL" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_SYNC" }}sync = "{{ getenv "VAULT_BACKEND_SYNC" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_AUTH_INFO" }}auth_info = "{{ getenv "VAULT_BACKEND_AUTH_INFO" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_ZNODE_OWNER" }}znode_owner = "{{ getenv "VAULT_BACKEND_ZNODE_OWNER" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_ACCESS_KEY" }}access_key = "{{ getenv "VAULT_BACKEND_ACCESS_KEY" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_SECRET_KEY" }}secret_key = "{{ getenv "VAULT_BACKEND_SECRET_KEY" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_SESSION_TOKEN" }}session_token = "{{ getenv "VAULT_BACKEND_SESSION_TOKEN" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_ENDPOINT" }}endpoint = "{{ getenv "VAULT_BACKEND_ENDPOINT" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_REGION" }}region = "{{ getenv "VAULT_BACKEND_REGION" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_TABLE" }}table = "{{ getenv "VAULT_BACKEND_TABLE" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_READ_CAPACITY" }}read_capacity = "{{ getenv "VAULT_BACKEND_READ_CAPACITY" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_WRITE_CAPACITY" }}write_capacity = "{{ getenv "VAULT_BACKEND_WRITE_CAPACITY" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_RECOVERY_MODE" }}recovery_mode = "{{ getenv "VAULT_BACKEND_RECOVERY_MODE" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_BUCKET" }}bucket = "{{ getenv "VAULT_BACKEND_BUCKET" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_DATABASE" }}database = "{{ getenv "VAULT_BACKEND_DATABASE" }}"{{end}}
+    {{if getenv "VAULT_BACKEND_CONNECTION_URL" }}connection_url = "{{ getenv "VAULT_BACKEND_CONNECTION_URL" }}"{{end}}
+}
+
+{{ if getenv "VAULT_HA_BACKEND" }} ha_backend "{{ getenv "VAULT_HA_BACKEND" }}" {
+    {{if getenv "VAULT_HA_BACKEND_ADDRESS" }}address = "{{ getenv "VAULT_HA_BACKEND_ADDRESS" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_ADVERTISE_ADDR" }}advertise_addr = "{{ getenv "VAULT_HA_BACKEND_ADVERTISE_ADDR" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_PATH" }}path = "{{ getenv "VAULT_HA_BACKEND_PATH" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_USERNAME" }}username = "{{ getenv "VAULT_HA_BACKEND_USERNAME" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_PASSWORD" }}password = "{{ getenv "VAULT_HA_BACKEND_PASSWORD" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_TLS_SKIP_VERIFY" }}tls_skip_verify = "{{ getenv "VAULT_HA_BACKEND_TLS_SKIP_VERIFY" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_TLS_CA_FILE" }}tls_ca_file = "{{ getenv "VAULT_HA_BACKEND_TLS_CA_FILE" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_TLS_CERT_FILE" }}tls_cert_file = "{{ getenv "VAULT_HA_BACKEND_TLS_CERT_FILE" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_TLS_KEY_FILE" }}tls_key_file = "{{ getenv "VAULT_HA_BACKEND_TLS_KEY_FILE" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_SCHEME" }}scheme = "{{ getenv "VAULT_HA_BACKEND_SCHEME" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_TOKEN" }}token = "{{ getenv "VAULT_HA_BACKEND_TOKEN" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_MAX_PARALLEL" }}max_parallel = "{{ getenv "VAULT_HA_BACKEND_MAX_PARALLEL" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_SYNC" }}sync = "{{ getenv "VAULT_HA_BACKEND_SYNC" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_AUTH_INFO" }}auth_info = "{{ getenv "VAULT_HA_BACKEND_AUTH_INFO" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_ZNODE_OWNER" }}znode_owner = "{{ getenv "VAULT_HA_BACKEND_ZNODE_OWNER" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_ACCESS_KEY" }}access_key = "{{ getenv "VAULT_HA_BACKEND_ACCESS_KEY" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_SECRET_KEY" }}secret_key = "{{ getenv "VAULT_HA_BACKEND_SECRET_KEY" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_SESSION_TOKEN" }}session_token = "{{ getenv "VAULT_HA_BACKEND_SESSION_TOKEN" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_ENDPOINT" }}endpoint = "{{ getenv "VAULT_HA_BACKEND_ENDPOINT" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_REGION" }}region = "{{ getenv "VAULT_HA_BACKEND_REGION" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_TABLE" }}table = "{{ getenv "VAULT_HA_BACKEND_TABLE" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_READ_CAPACITY" }}read_capacity = "{{ getenv "VAULT_HA_BACKEND_READ_CAPACITY" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_WRITE_CAPACITY" }}write_capacity = "{{ getenv "VAULT_HA_BACKEND_WRITE_CAPACITY" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_RECOVERY_MODE" }}recovery_mode = "{{ getenv "VAULT_HA_BACKEND_RECOVERY_MODE" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_BUCKET" }}bucket = "{{ getenv "VAULT_HA_BACKEND_BUCKET" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_DATABASE" }}database = "{{ getenv "VAULT_HA_BACKEND_DATABASE" }}"{{end}}
+    {{if getenv "VAULT_HA_BACKEND_CONNECTION_URL" }}connection_url = "{{ getenv "VAULT_HA_BACKEND_CONNECTION_URL" }}"{{end}}
+}{{ end }}
+
+listener "tcp" {
+    address = "{{ getenv "VAULT_LISTENER_ADDRESS" }}"
+    {{ if getenv "VAULT_LISTENER_TLS_DISABLE" }}tls_disable = {{ getenv "VAULT_LISTENER_TLS_DISABLE" }}{{ end }}
+    {{ if getenv "VAULT_LISTENER_TLS_CERT_FILE" }}tls_cert_file = "{{ getenv "VAULT_LISTENER_TLS_CERT_FILE" }}"{{ end }}
+    {{ if getenv "VAULT_LISTENER_TLS_KEY_FILE" }}tls_key_file = "{{ getenv "VAULT_LISTENER_TLS_KEY_FILE" }}"{{ end }}
+    {{ if getenv "VAULT_LISTENER_TLS_MIN_VERSION" }}tls_min_version = "{{ getenv "VAULT_LISTENER_TLS_MIN_VERSION" }}"{{ end }}
+}
+
+telemetry {
+    {{ if getenv "VAULT_TELEMETRY_STATSITE_ADDRESS" }}statsite_address = "{{ getenv "VAULT_TELEMETRY_STATSITE_ADDRESS" }}"{{ end }}
+    {{ if getenv "VAULT_TELEMETRY_DISABLE_HOSTNAME" }}disable_hostname = {{ getenv "VAULT_TELEMETRY_DISABLE_HOSTNAME" }}{{ end }}
+}
+
+{{ if getenv "VAULT_DEFAULT_LEASE_TTL" }}default_lease_ttl = "{{ getenv "VAULT_DEFAULT_LEASE_TTL" }}"{{ end }}
+{{ if getenv "VAULT_MAX_LEASE_TTL" }}max_lease_ttl = "{{ getenv "VAULT_MAX_LEASE_TTL" }}"{{ end }}
+{{ if getenv "VAULT_DISABLE_MLOCK" }}disable_mlock = {{ getenv "VAULT_DISABLE_MLOCK" }}{{ end }}
+{{ if getenv "VAULT_DISABLE_CACHE" }}disable_cache = {{ getenv "VAULT_DISABLE_CACHE" }}{{ end }}
