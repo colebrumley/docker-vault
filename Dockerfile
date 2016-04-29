@@ -14,6 +14,7 @@ RUN     apk add --update wget ca-certificates && \
         chmod a+x /usr/bin/vault /usr/bin/confd && \
         rm -f /tmp/vault.zip && \
         rm -Rf /var/cache/apk/*
+EXPOSE  8200
 COPY    wrapper.sh /wrapper.sh
 COPY    confd/ /etc/confd/
 CMD     ["/wrapper.sh"]
